@@ -11,10 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-<body>
 details.jsp<br/>
-${product.name}<br/>
-${product.description}<br/>
-${product.price}<br/>
+${requestScope.product.name}<br/>
+${requestScope.product.description}<br/>
+${requestScope.product.price}<br/>
 </body>
 </html>

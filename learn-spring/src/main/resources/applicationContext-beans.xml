@@ -3,4 +3,40 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!-- 构造函数的 DI 可能导致循环依赖 -->
+    <!--<bean id="classA" class="com.lvmama.scs.learnspring.beans.ClassA" lazy-init="true">-->
+        <!--<constructor-arg name="b" ref="classB"/>-->
+    <!--</bean>-->
+    <!--<bean id="classB" class="com.lvmama.scs.learnspring.beans.ClassB" lazy-init="true">-->
+        <!--<constructor-arg name="a" ref="classA"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="classA" clasys="com.lvmama.scs.learnspring.beans.ClassA">-->
+        <!--<constructor-arg name="b" ref="classB"/>-->
+    <!--</bean>-->
+    <!--<bean id="classB" class="com.lvmama.scs.learnspring.beans.ClassB" lazy-init="true">-->
+        <!--<constructor-arg name="a" ref="classA"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="classA" class="com.lvmama.scs.learnspring.beans.ClassA" lazy-init="true">-->
+        <!--<constructor-arg name="b" ref="classB"/>-->
+    <!--</bean>-->
+    <!--<bean id="classB" class="com.lvmama.scs.learnspring.beans.ClassB">-->
+        <!--<constructor-arg name="a" ref="classA"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="classA" class="com.lvmama.scs.learnspring.beans.ClassA">-->
+        <!--<constructor-arg name="b" ref="classB"/>-->
+    <!--</bean>-->
+    <!--<bean id="classB" class="com.lvmama.scs.learnspring.beans.ClassB">-->
+        <!--<constructor-arg name="a" ref="classA"/>-->
+    <!--</bean>-->
+
+    <!-- Setter 方法不会导致循环依赖 -->
+    <bean id="classA" class="com.lvmama.scs.learnspring.beans.ClassA">
+        <property name="b" ref="classB"/>
+    </bean>
+    <bean id="classB" class="com.lvmama.scs.learnspring.beans.ClassB">
+        <property name="a" ref="classA"/>
+    </bean>
 </beans>
