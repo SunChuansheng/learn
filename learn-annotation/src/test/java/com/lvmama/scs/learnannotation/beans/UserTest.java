@@ -1,7 +1,6 @@
-package com.lvmama.scs.learnannotation.beans; 
+package com.lvmama.scs.learnannotation.beans;
 
 import org.junit.Test;
-
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;

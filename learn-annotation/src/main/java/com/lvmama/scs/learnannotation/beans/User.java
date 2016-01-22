@@ -2,13 +2,7 @@ package com.lvmama.scs.learnannotation.beans;
 
 import com.lvmama.scs.learnannotation.enumerations.Gender;
 
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import java.util.Set;
 
 /**
  * 用户类
