@@ -1,5 +1,6 @@
 package com.lvmama.scs.learnannotation.beans;
 
+import com.lvmama.scs.learnannotation.ClassName;
 import org.junit.Test;
 
 import javax.validation.ConstraintViolation;
@@ -23,6 +24,17 @@ public class UserTest {
 
         Set<ConstraintViolation<User>> violations = validator.validate(u);
         System.out.println(violations);
+    }
+
+    @Test
+    public void testClassName(){
+        User u = new User();
+        boolean flag = u.getClass().isAnnotationPresent(ClassName.class);
+        if(flag){
+            System.out.println("判断类是annotation");
+            ClassName className = u.getClass().getAnnotation(ClassName.class);
+            System.out.println(className);
+        }
     }
 
 

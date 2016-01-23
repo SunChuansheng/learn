@@ -1,5 +1,6 @@
 package com.lvmama.scs.learnannotation.beans;
 
+import com.lvmama.scs.learnannotation.ClassName;
 import com.lvmama.scs.learnannotation.enumerations.Gender;
 
 import javax.validation.constraints.NotNull;
@@ -8,6 +9,7 @@ import javax.validation.constraints.NotNull;
  * 用户类
  * Created by sunchuansheng on 2015/12/30.
  */
+@ClassName("aaa")
 public class User {
 
     @NotNull
