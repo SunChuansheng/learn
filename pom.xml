@@ -33,5 +33,7 @@
         <module>learn-spring</module>
         <module>learn-springmvc</module>
         <module>learn-war</module>
+        <module>learn-beanvalidation</module>
+        <module>learn-git</module>
     </modules>
 </project>
